@@ -3,6 +3,13 @@ import { utilService } from './services/util.service'
 
 const bugs = utilService.readJsonFile('data/bugs.json')
 
+export const bugService ={
+    query,
+    getById,
+    save,
+    remove
+}
+
 async function query(){
     try{
         return bugs
