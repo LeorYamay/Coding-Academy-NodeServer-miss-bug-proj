@@ -1,0 +1,92 @@
+[
+    {
+        "_id": "bug001",
+        "title": "Error when uploading car images",
+        "severity": 2,
+        "createdAt": 1644240500000
+    },
+    {
+        "_id": "bug002",
+        "title": "Incorrect display of car details on user profile",
+        "severity": 1,
+        "createdAt": 1644239900000
+    },
+    {
+        "_id": "bug003",
+        "title": "Search feature not returning relevant car results",
+        "severity": 3,
+        "createdAt": 1644239400000
+    },
+    {
+        "_id": "bug004",
+        "title": "Unable to add car to favorites",
+        "severity": 2,
+        "createdAt": 1644238800000
+    },
+    {
+        "_id": "bug005",
+        "title": "Crash when accessing car details page",
+        "severity": 3,
+        "createdAt": 1644238300000
+    },
+    {
+        "_id": "bug006",
+        "title": "Incorrect calculation of total car price",
+        "severity": 2,
+        "createdAt": 1644237700000
+    },
+    {
+        "_id": "bug007",
+        "title": "UI overlap issue on car comparison page",
+        "severity": 1,
+        "createdAt": 1644237100000
+    },
+    {
+        "_id": "bug008",
+        "title": "Error when submitting car review",
+        "severity": 2,
+        "createdAt": 1644236500000
+    },
+    {
+        "_id": "bug009",
+        "title": "Sudden logout when accessing car forum",
+        "severity": 3,
+        "createdAt": 1644235900000
+    },
+    {
+        "_id": "bug010",
+        "title": "Inconsistent loading times on car listings",
+        "severity": 2,
+        "createdAt": 1644235300000
+    },
+    {
+        "_id": "bug011",
+        "title": "Incorrect sorting of car search results",
+        "severity": 3,
+        "createdAt": 1644234700000
+    },
+    {
+        "_id": "bug012",
+        "title": "Broken link on car specifications page",
+        "severity": 1,
+        "createdAt": 1644234100000
+    },
+    {
+        "_id": "bug013",
+        "title": "Unable to access car purchase history",
+        "severity": 2,
+        "createdAt": 1644233500000
+    },
+    {
+        "_id": "bug014",
+        "title": "Security vulnerability in car payment processing",
+        "severity": 3,
+        "createdAt": 1644232900000
+    },
+    {
+        "_id": "bug015",
+        "title": "Missing user reviews on car detail page",
+        "severity": 1,
+        "createdAt": 1644232300000
+    }
+]
