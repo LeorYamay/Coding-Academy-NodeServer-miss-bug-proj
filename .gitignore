@@ -15,3 +15,5 @@ puppeteer-*/
 .env
 
 data/bugs.json
+
+*.zip
