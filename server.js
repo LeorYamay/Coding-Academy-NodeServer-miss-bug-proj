@@ -24,7 +24,7 @@ app.use(cookieParser())
 app.use(cors(corsOptions))
 
 
-app.get('/', (req, res) => res.send('Hello there'))
+// app.get('/', (req, res) => res.send('Hello there'))
 app.listen(3030, () => console.log('Server ready at port 3030'))
 
 app.get('/api/bug', async (req, res) => {
