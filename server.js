@@ -1,7 +1,8 @@
 import express from 'express'
 import cors from 'cors'
 import cookieParser from 'cookie-parser'
-import { bugService } from './services/bug.service'
+import ms from 'ms'
+import { bugService } from './services/bug.service.js'
 
 
 
@@ -43,6 +44,7 @@ app.get('/api/bug/save', async (req, res) => {
             severity: req.query.severity,
             createdAt: req.query.createdAt
         }
+        console.log('bugToSave', bugToSave)
         await bugService.save(bugToSave)
         res.send(bugToSave)
     } catch (error) {
@@ -53,10 +55,19 @@ app.get('/api/bug/save', async (req, res) => {
 app.get('/api/bug/:bugId', async (req, res) => {
     try {
         const bugId = req.params.bugId
+        let bugLimiter = req.cookies.bugLimiter
+        bugLimiter = updateVisitedBugs(bugId, bugLimiter)
+        console.log('updateVisitedBugs-bugLimiter', bugLimiter)
+        res.cookie('bugLimiter', bugLimiter)
         const bug = await bugService.getById(bugId)
         res.send(bug)
     } catch (error) {
-        res.status(400).send('could not get bug')
+        if (error.message === 'bugLimit Reached') {
+            res.status(401).send('Wait for a bit')
+        } else {
+            res.status(400).send('could not get bug')
+        }
+        
     }
 
 })
@@ -70,3 +81,29 @@ app.get('/api/bug/:bugId/remove', async (req, res) => {
         res.status(400).send('could not remove bug')
     }
 })
+
+const updateVisitedBugs = (bugId, bugLimiter) => {
+    const timeout = '7 seconds'
+    if (!bugLimiter) {
+        bugLimiter = {
+            visitedBugs:[],
+            lastVisit:Date.now()
+        }
+    }
+    if (bugLimiter.visitedBugs.length < 3) {
+        bugLimiter.visitedBugs.push(bugId)
+        if (bugLimiter.visitedBugs.length === 3) {
+            bugLimiter.lastVisit = Date.now()
+        }
+    }
+    else {
+        if (Date.now() - bugLimiter.lastVisit > ms(timeout)) {
+            bugLimiter.visitedBugs = []
+        }
+        else {
+            throw new Error('bugLimit Reached')
+        }
+    }
+    console.log(`User visited at the following bugs:${bugLimiter.visitedBugs} within the past ${timeout}`)
+    return bugLimiter
+}

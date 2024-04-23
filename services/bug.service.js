@@ -1,5 +1,5 @@
-
-import { utilService } from './services/util.service'
+import fs from 'fs'
+import { utilService } from './util.service.js'
 
 const bugs = utilService.readJsonFile('data/bugs.json')
 
@@ -43,6 +43,7 @@ async function remove(bugId){
 async function save(bugToSave) {
     try {
         if (bugToSave._id) {
+            console.log('bugToSave._id',bugToSave._id)
             const idx = bugs.findIndex(bug => bug._id === bugToSave._id)
             if (idx < 0) throw `Cant find bug with _id ${bugToSave._id}`
             bugs[idx] = bugToSave
@@ -50,9 +51,11 @@ async function save(bugToSave) {
             bugToSave._id = utilService.makeId()
             bugs.push(bugToSave)
         }
+        console.log('bugToSave2',bugToSave)
         await _saveBugsToFile()
         return bugToSave
     } catch (error) {
+        console.error(error)
         throw error
     }
 }

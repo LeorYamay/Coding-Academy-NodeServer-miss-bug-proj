@@ -4,9 +4,6 @@
   "description": "hw nodeserver",
   "main": "index.js",
   "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "LeorY",
   "license": "ISC",
   "dependencies": {
@@ -14,6 +11,7 @@
     "cors": "^2.8.5",
     "express": "^4.19.2",
     "fr": "^1.2.2",
-    "fs": "^0.0.1-security"
+    "fs": "^0.0.1-security",
+    "ms": "^2.1.3"
   }
 }
