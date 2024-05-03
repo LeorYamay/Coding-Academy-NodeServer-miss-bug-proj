@@ -1,7 +1,7 @@
 import fs from 'fs'
 import { utilService } from './util.service.js'
 
-const bugs = utilService.readJsonFile('../data/bugs.json')
+const bugs = utilService.readJsonFile('./data/bugs.json')
 
 export const bugService ={
     query,
