@@ -2,6 +2,7 @@ import express from 'express'
 import cors from 'cors'
 import cookieParser from 'cookie-parser'
 import ms from 'ms'
+import path from 'path'
 import { bugService } from './services/bug.service.js'
 
 
@@ -19,7 +20,7 @@ const corsOptions = {
 }
 
 // Express Config:
-app.use(express.static('public'))
+app.use(express.static(path.join(__dirname, 'public')))
 app.use(cookieParser())
 app.use(cors(corsOptions))
 
