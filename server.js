@@ -16,7 +16,8 @@ const corsOptions = {
         'http://localhost:5173',
         'http://localhost:3000',
         'https://coding-academy-nodeserver-miss-bug-proj.onrender.com:3000',
-        'https://coding-academy-nodeserver-miss-bug-proj.onrender.com:5173'
+        'https://coding-academy-nodeserver-miss-bug-proj.onrender.com:5173',
+        'https://coding-academy-nodeserver-miss-bug-proj.onrender.com:443',
     ],
     credentials: true
 }
