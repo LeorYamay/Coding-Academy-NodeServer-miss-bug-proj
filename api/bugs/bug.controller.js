@@ -1,6 +1,6 @@
 import { bugService } from "./bug.service.js";
 
-export async function getbugs(req, res) {
+export async function getBugs(req, res) {
   try {
     const {
       txt,
@@ -11,7 +11,9 @@ export async function getbugs(req, res) {
       createdAfter,
       pageIdx,
       sortBy,
-    } = req.query;
+      createdById,
+      createdByFullname,
+    } = req.body;
     const filterBy = {
       txt,
       description,
@@ -20,6 +22,8 @@ export async function getbugs(req, res) {
       createdBefore,
       createdAfter,
       pageIdx: +pageIdx,
+      createdById,
+      createdByFullname,
     };
     const bugs = await bugService.query(filterBy);
     res.send(bugs);
@@ -28,7 +32,7 @@ export async function getbugs(req, res) {
   }
 }
 
-export async function updatebug(req, res) {
+export async function updateBug(req, res) {
   const bug = { ...req.body };
   try {
     let bugToSave = {
@@ -37,14 +41,13 @@ export async function updatebug(req, res) {
       description: bug.description,
       severity: +bug.severity,
     };
-    console.log("bugToSave", bugToSave);
     await bugService.save(bugToSave);
     res.send(bugToSave);
   } catch (error) {
     res.status(400).send(`could not save bug ${bug._id}`);
   }
 }
-export async function addbug(req, res) {
+export async function addBug(req, res) {
   const bug = { ...req.body };
   try {
     let bugToSave = {
@@ -60,7 +63,7 @@ export async function addbug(req, res) {
   }
 }
 
-export async function getbug(req, res) {
+export async function getBug(req, res) {
   try {
     const bugId = req.params.bugId;
     let bugLimiter = req.cookies.bugLimiter;
@@ -77,7 +80,7 @@ export async function getbug(req, res) {
   }
 }
 
-export async function removebug(req, res) {
+export async function removeBug(req, res) {
   try {
     const bugId = req.params.bugId;
     await bugService.remove(bugId);
@@ -110,7 +113,7 @@ const updateVisitedBugs = (bugId, bugLimiter) => {
       }
     }
   }
-  console.log(
+  loggerService.info(
     `User visited at the following bugs:${bugLimiter.visitedBugs} within the past ${timeout}`
   );
   return bugLimiter;

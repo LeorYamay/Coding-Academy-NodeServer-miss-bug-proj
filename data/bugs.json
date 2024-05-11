@@ -9,7 +9,11 @@
             "Upload Error",
             "Image Upload",
             "File Upload"
-        ]
+        ],
+        "creator": {
+            "_id": "7",
+            "fullname": "James Taylor"
+        }
     },
     {
         "_id": "bug002",
@@ -21,7 +25,11 @@
             "User Profile",
             "Display Issue",
             "Information Display"
-        ]
+        ],
+        "creator": {
+            "_id": "1",
+            "fullname": "John Doe"
+        }
     },
     {
         "_id": "bug003",
@@ -33,7 +41,11 @@
             "Search",
             "Search Functionality",
             "Search Results"
-        ]
+        ],
+        "creator": {
+            "_id": "9",
+            "fullname": "Daniel Anderson"
+        }
     },
     {
         "_id": "bug004",
@@ -45,7 +57,11 @@
             "Favorites",
             "Add to Favorites",
             "Favorite Vehicles"
-        ]
+        ],
+        "creator": {
+            "_id": "10",
+            "fullname": "Admin"
+        }
     },
     {
         "_id": "bug005",
@@ -57,7 +73,11 @@
             "Crash",
             "Website Crash",
             "Page Access"
-        ]
+        ],
+        "creator": {
+            "_id": "3",
+            "fullname": "Michael Johnson"
+        }
     },
     {
         "_id": "bug006",
@@ -69,7 +89,11 @@
             "Price Calculation",
             "Total Price",
             "Calculation Error"
-        ]
+        ],
+        "creator": {
+            "_id": "2",
+            "fullname": "Jane Smith"
+        }
     },
     {
         "_id": "bug007",
@@ -81,7 +105,11 @@
             "UI Overlap",
             "User Interface",
             "Comparison Page"
-        ]
+        ],
+        "creator": {
+            "_id": "5",
+            "fullname": "David Lee"
+        }
     },
     {
         "_id": "bug008",
@@ -93,7 +121,11 @@
             "Review Submission",
             "Submit Review",
             "Review Process"
-        ]
+        ],
+        "creator": {
+            "_id": "4",
+            "fullname": "Emily Brown"
+        }
     },
     {
         "_id": "bug009",
@@ -105,7 +137,11 @@
             "Logout",
             "User Session",
             "Forum Access"
-        ]
+        ],
+        "creator": {
+            "_id": "6",
+            "fullname": "Sarah Wilson"
+        }
     },
     {
         "_id": "bug010",
@@ -117,7 +153,11 @@
             "Loading Times",
             "Page Loading",
             "Content Display"
-        ]
+        ],
+        "creator": {
+            "_id": "8",
+            "fullname": "Olivia Martinez"
+        }
     },
     {
         "_id": "bug011",
@@ -129,7 +169,11 @@
             "Sorting",
             "Search Results",
             "Algorithm Issue"
-        ]
+        ],
+        "creator": {
+            "_id": "7",
+            "fullname": "James Taylor"
+        }
     },
     {
         "_id": "bug012",
@@ -141,7 +185,11 @@
             "Broken Link",
             "Hyperlink",
             "Specification Page"
-        ]
+        ],
+        "creator": {
+            "_id": "1",
+            "fullname": "John Doe"
+        }
     },
     {
         "_id": "bug013",
@@ -153,7 +201,11 @@
             "Purchase History",
             "Access Issue",
             "History Section"
-        ]
+        ],
+        "creator": {
+            "_id": "9",
+            "fullname": "Daniel Anderson"
+        }
     },
     {
         "_id": "bug014",
@@ -165,7 +217,11 @@
             "Security",
             "Payment Processing",
             "Vulnerability"
-        ]
+        ],
+        "creator": {
+            "_id": "10",
+            "fullname": "Admin"
+        }
     },
     {
         "_id": "bug015",
@@ -177,6 +233,10 @@
             "User Reviews",
             "Review Display",
             "Feedback"
-        ]
+        ],
+        "creator": {
+            "_id": "2",
+            "fullname": "Jane Smith"
+        }
     }
 ]

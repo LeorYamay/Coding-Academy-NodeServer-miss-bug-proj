@@ -1,7 +1,9 @@
 import fs from "fs";
 import { utilService } from "../../services/util.service.js";
+import { loggerService } from "../../services/logger.service.js";
 
 const bugs = utilService.readJsonFile("./data/bugs.json");
+const PAGE_SIZE = 4;
 
 export const bugService = {
   query,
@@ -11,48 +13,57 @@ export const bugService = {
 };
 
 async function query(filterBy = {}) {
-  const bugsPerPage = 4;
   try {
-    let filteredbugs = [...bugs];
+    let filteredBugs = [...bugs];
+    console.log(filterBy)
     if (filterBy.createdAfter) {
-      filteredbugs = filteredbugs.filter(
+      filteredBugs = filteredBugs.filter(
         (bug) => bug.createdAt > filterBy.createdAfter
       );
     }
     if (filterBy.createdBefore) {
-      filteredbugs = filteredbugs.filter(
+      filteredBugs = filteredBugs.filter(
         (bug) => bug.createdAt < filterBy.createdBefore
       );
     }
     if (filterBy.maxSeverity) {
-      filteredbugs = filteredbugs.filter(
+      filteredBugs = filteredBugs.filter(
         (bug) => bug.severity <= filterBy.maxSeverity
       );
     }
     if (filterBy.minSeverity) {
-      filteredbugs = filteredbugs.filter(
+      filteredBugs = filteredBugs.filter(
         (bug) => bug.severity >= filterBy.minSeverity
       );
     }
     if (filterBy.txt) {
-      const regExp = new RegExp(filterBy.txt, "i");
-      filteredbugs = filteredbugs.filter(
-        (bug) => regExp.test(bug.title) || regExp.test(bug.description)
+      const regExpTxt = new RegExp(filterBy.txt, "i");
+      filteredBugs = filteredBugs.filter(
+        (bug) => regExpTxt.test(bug.title) || regExpTxt.test(bug.description)
       );
     }
-    let firstBugIdx = filterBy.pageIdx
-      ? Math.max(
-          Math.min(filterBy.pageIdx * bugsPerPage, filteredbugs.length - 1),
-          0
-        )
-      : 0;
-    console.log("filteredbugs.length", filteredbugs.length);
-    filteredbugs = filteredbugs.slice(firstBugIdx, firstBugIdx + bugsPerPage);
-    console.log("filteredbugs.length", filteredbugs.length);
-    console.log("firstBugIdx", firstBugIdx);
-    return filteredbugs;
+    if (filterBy.createdById) {
+      filteredBugs = filteredBugs.filter(
+        (bug) => bug.creator._id === filterBy.createdById
+      );
+    }
+    if (filterBy.createdByFullname) {
+      const regExpCreatorName = new RegExp(filterBy.createdByFullname, "i");
+      filteredBugs = filteredBugs.filter((bug) =>
+        regExpCreatorName.test(bug.creator.fullname)
+      );
+    }
+    if (filterBy.pageIdx) {
+      const firstBugIdx = Math.max(
+        Math.min(filterBy.pageIdx * PAGE_SIZE, filteredBugs.length - 1),
+        0
+      );
+      filteredBugs = filteredBugs.slice(firstBugIdx, firstBugIdx + PAGE_SIZE);
+    }
+
+    return filteredBugs;
   } catch (error) {
-    console.error(error);
+    loggerService.error(error);
     throw error;
   }
 }
@@ -62,7 +73,7 @@ async function getById(bugId) {
     const bug = bugs.find((bug) => bug._id === bugId);
     return bug;
   } catch (error) {
-    console.error(error);
+    loggerService.error(error);
     throw error;
   }
 }
@@ -73,7 +84,7 @@ async function remove(bugId) {
     bugs.splice(bugIdx, 1);
     _saveBugsToFile();
   } catch (error) {
-    console.error(error);
+    loggerService.error(error);
     throw error;
   }
 }
@@ -91,7 +102,7 @@ async function save(bugToSave) {
     await _saveBugsToFile();
     return bugToSave;
   } catch (error) {
-    console.error(error);
+    loggerService.error(error);
     throw error;
   }
 }

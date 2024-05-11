@@ -1,122 +1,242 @@
 [
   {
-    "_id": "bug001",
-    "title": "Error when uploading car images",
-    "description": "Users encounter an error when trying to upload images of their cars. The upload process fails unexpectedly.",
-    "severity": 2,
-    "createdAt": 1644240500000,
-    "labels": ["Upload Error", "Image Upload", "File Upload"]
+      "_id": "bug001",
+      "title": "Error when uploading car images",
+      "description": "Users encounter an error when trying to upload images of their cars. The upload process fails unexpectedly.",
+      "severity": 2,
+      "createdAt": 1644240500000,
+      "labels": [
+          "Upload Error",
+          "Image Upload",
+          "File Upload"
+      ],
+      "creator": {
+          "_id": "7",
+          "fullname": "James Taylor"
+      }
   },
   {
-    "_id": "bug002",
-    "title": "Incorrect display of car details on user profile",
-    "description": "Certain details of cars are not displayed correctly on the user profile page. This includes information such as model year, mileage, and features.",
-    "severity": 1,
-    "createdAt": 1644239900000,
-    "labels": ["User Profile", "Display Issue", "Information Display"]
+      "_id": "bug002",
+      "title": "Incorrect display of car details on user profile",
+      "description": "Certain details of cars are not displayed correctly on the user profile page. This includes information such as model year, mileage, and features.",
+      "severity": 1,
+      "createdAt": 1644239900000,
+      "labels": [
+          "User Profile",
+          "Display Issue",
+          "Information Display"
+      ],
+      "creator": {
+          "_id": "1",
+          "fullname": "John Doe"
+      }
   },
   {
-    "_id": "bug003",
-    "title": "Search feature not returning relevant car results",
-    "description": "The search functionality on the website fails to return relevant results when users search for specific car models or features.",
-    "severity": 3,
-    "createdAt": 1644239400000,
-    "labels": ["Search", "Search Functionality", "Search Results"]
+      "_id": "bug003",
+      "title": "Search feature not returning relevant car results",
+      "description": "The search functionality on the website fails to return relevant results when users search for specific car models or features.",
+      "severity": 3,
+      "createdAt": 1644239400000,
+      "labels": [
+          "Search",
+          "Search Functionality",
+          "Search Results"
+      ],
+      "creator": {
+          "_id": "9",
+          "fullname": "Daniel Anderson"
+      }
   },
   {
-    "_id": "bug004",
-    "title": "Unable to add car to favorites",
-    "description": "Users are unable to add cars to their list of favorite vehicles. Clicking the 'Add to Favorites' button does not produce any action.",
-    "severity": 2,
-    "createdAt": 1644238800000,
-    "labels": ["Favorites", "Add to Favorites", "Favorite Vehicles"]
+      "_id": "bug004",
+      "title": "Unable to add car to favorites",
+      "description": "Users are unable to add cars to their list of favorite vehicles. Clicking the 'Add to Favorites' button does not produce any action.",
+      "severity": 2,
+      "createdAt": 1644238800000,
+      "labels": [
+          "Favorites",
+          "Add to Favorites",
+          "Favorite Vehicles"
+      ],
+      "creator": {
+          "_id": "10",
+          "fullname": "Admin"
+      }
   },
   {
-    "_id": "bug005",
-    "title": "Crash when accessing car details page",
-    "description": "The website crashes or becomes unresponsive when users attempt to view the detailed information page of a specific car listing.",
-    "severity": 3,
-    "createdAt": 1644238300000,
-    "labels": ["Crash", "Website Crash", "Page Access"]
+      "_id": "bug005",
+      "title": "Crash when accessing car details page",
+      "description": "The website crashes or becomes unresponsive when users attempt to view the detailed information page of a specific car listing.",
+      "severity": 3,
+      "createdAt": 1644238300000,
+      "labels": [
+          "Crash",
+          "Website Crash",
+          "Page Access"
+      ],
+      "creator": {
+          "_id": "3",
+          "fullname": "Michael Johnson"
+      }
   },
   {
-    "_id": "bug006",
-    "title": "Incorrect calculation of total car price",
-    "description": "The system calculates the total price of a car incorrectly, leading to discrepancies between the displayed price and the actual amount.",
-    "severity": 2,
-    "createdAt": 1644237700000,
-    "labels": ["Price Calculation", "Total Price", "Calculation Error"]
+      "_id": "bug006",
+      "title": "Incorrect calculation of total car price",
+      "description": "The system calculates the total price of a car incorrectly, leading to discrepancies between the displayed price and the actual amount.",
+      "severity": 2,
+      "createdAt": 1644237700000,
+      "labels": [
+          "Price Calculation",
+          "Total Price",
+          "Calculation Error"
+      ],
+      "creator": {
+          "_id": "2",
+          "fullname": "Jane Smith"
+      }
   },
   {
-    "_id": "bug007",
-    "title": "UI overlap issue on car comparison page",
-    "description": "There is an issue with the user interface where elements overlap or are displayed incorrectly on the car comparison page, making it difficult to compare different vehicles.",
-    "severity": 1,
-    "createdAt": 1644237100000,
-    "labels": ["UI Overlap", "User Interface", "Comparison Page"]
+      "_id": "bug007",
+      "title": "UI overlap issue on car comparison page",
+      "description": "There is an issue with the user interface where elements overlap or are displayed incorrectly on the car comparison page, making it difficult to compare different vehicles.",
+      "severity": 1,
+      "createdAt": 1644237100000,
+      "labels": [
+          "UI Overlap",
+          "User Interface",
+          "Comparison Page"
+      ],
+      "creator": {
+          "_id": "5",
+          "fullname": "David Lee"
+      }
   },
   {
-    "_id": "bug008",
-    "title": "Error when submitting car review",
-    "description": "Users encounter an error message when attempting to submit a review for a car they have purchased or test-driven. The review submission process fails.",
-    "severity": 2,
-    "createdAt": 1644236500000,
-    "labels": ["Review Submission", "Submit Review", "Review Process"]
+      "_id": "bug008",
+      "title": "Error when submitting car review",
+      "description": "Users encounter an error message when attempting to submit a review for a car they have purchased or test-driven. The review submission process fails.",
+      "severity": 2,
+      "createdAt": 1644236500000,
+      "labels": [
+          "Review Submission",
+          "Submit Review",
+          "Review Process"
+      ],
+      "creator": {
+          "_id": "4",
+          "fullname": "Emily Brown"
+      }
   },
   {
-    "_id": "bug009",
-    "title": "Sudden logout when accessing car forum",
-    "description": "Users are unexpectedly logged out of their accounts when trying to access the car forum section of the website. This occurs without any user action.",
-    "severity": 3,
-    "createdAt": 1644235900000,
-    "labels": ["Logout", "User Session", "Forum Access"]
+      "_id": "bug009",
+      "title": "Sudden logout when accessing car forum",
+      "description": "Users are unexpectedly logged out of their accounts when trying to access the car forum section of the website. This occurs without any user action.",
+      "severity": 3,
+      "createdAt": 1644235900000,
+      "labels": [
+          "Logout",
+          "User Session",
+          "Forum Access"
+      ],
+      "creator": {
+          "_id": "6",
+          "fullname": "Sarah Wilson"
+      }
   },
   {
-    "_id": "bug010",
-    "title": "Inconsistent loading times on car listings",
-    "description": "The loading times for car listings vary inconsistently, with some pages loading quickly while others take a longer time to display content.",
-    "severity": 2,
-    "createdAt": 1644235300000,
-    "labels": ["Loading Times", "Page Loading", "Content Display"]
+      "_id": "bug010",
+      "title": "Inconsistent loading times on car listings",
+      "description": "The loading times for car listings vary inconsistently, with some pages loading quickly while others take a longer time to display content.",
+      "severity": 2,
+      "createdAt": 1644235300000,
+      "labels": [
+          "Loading Times",
+          "Page Loading",
+          "Content Display"
+      ],
+      "creator": {
+          "_id": "8",
+          "fullname": "Olivia Martinez"
+      }
   },
   {
-    "_id": "bug011",
-    "title": "Incorrect sorting of car search results",
-    "description": "The sorting algorithm for displaying search results is not functioning correctly. Results are displayed out of order or do not match the selected sorting criteria.",
-    "severity": 3,
-    "createdAt": 1644234700000,
-    "labels": ["Sorting", "Search Results", "Algorithm Issue"]
+      "_id": "bug011",
+      "title": "Incorrect sorting of car search results",
+      "description": "The sorting algorithm for displaying search results is not functioning correctly. Results are displayed out of order or do not match the selected sorting criteria.",
+      "severity": 3,
+      "createdAt": 1644234700000,
+      "labels": [
+          "Sorting",
+          "Search Results",
+          "Algorithm Issue"
+      ],
+      "creator": {
+          "_id": "7",
+          "fullname": "James Taylor"
+      }
   },
   {
-    "_id": "bug012",
-    "title": "Broken link on car specifications page",
-    "description": "There is a broken hyperlink on the car specifications page that leads to an incorrect or non-existent destination when clicked by users.",
-    "severity": 1,
-    "createdAt": 1644234100000,
-    "labels": ["Broken Link", "Hyperlink", "Specification Page"]
+      "_id": "bug012",
+      "title": "Broken link on car specifications page",
+      "description": "There is a broken hyperlink on the car specifications page that leads to an incorrect or non-existent destination when clicked by users.",
+      "severity": 1,
+      "createdAt": 1644234100000,
+      "labels": [
+          "Broken Link",
+          "Hyperlink",
+          "Specification Page"
+      ],
+      "creator": {
+          "_id": "1",
+          "fullname": "John Doe"
+      }
   },
   {
-    "_id": "bug013",
-    "title": "Unable to access car purchase history",
-    "description": "Users encounter an error message or are unable to access their car purchase history section of the website. This prevents them from viewing past purchases.",
-    "severity": 2,
-    "createdAt": 1644233500000,
-    "labels": ["Purchase History", "Access Issue", "History Section"]
+      "_id": "bug013",
+      "title": "Unable to access car purchase history",
+      "description": "Users encounter an error message or are unable to access their car purchase history section of the website. This prevents them from viewing past purchases.",
+      "severity": 2,
+      "createdAt": 1644233500000,
+      "labels": [
+          "Purchase History",
+          "Access Issue",
+          "History Section"
+      ],
+      "creator": {
+          "_id": "9",
+          "fullname": "Daniel Anderson"
+      }
   },
   {
-    "_id": "bug014",
-    "title": "Security vulnerability in car payment processing",
-    "description": "A security vulnerability has been identified in the payment processing system for car purchases. This poses a risk of unauthorized access or data breaches.",
-    "severity": 3,
-    "createdAt": 1644232900000,
-    "labels": ["Security", "Payment Processing", "Vulnerability"]
+      "_id": "bug014",
+      "title": "Security vulnerability in car payment processing",
+      "description": "A security vulnerability has been identified in the payment processing system for car purchases. This poses a risk of unauthorized access or data breaches.",
+      "severity": 3,
+      "createdAt": 1644232900000,
+      "labels": [
+          "Security",
+          "Payment Processing",
+          "Vulnerability"
+      ],
+      "creator": {
+          "_id": "10",
+          "fullname": "Admin"
+      }
   },
   {
-    "_id": "bug015",
-    "title": "Missing user reviews on car detail page",
-    "description": "User reviews for certain cars are not displayed on the detailed information page. Users are unable to view feedback from other customers.",
-    "severity": 1,
-    "createdAt": 1644232300000,
-    "labels": ["User Reviews", "Review Display", "Feedback"]
+      "_id": "bug015",
+      "title": "Missing user reviews on car detail page",
+      "description": "User reviews for certain cars are not displayed on the detailed information page. Users are unable to view feedback from other customers.",
+      "severity": 1,
+      "createdAt": 1644232300000,
+      "labels": [
+          "User Reviews",
+          "Review Display",
+          "Feedback"
+      ],
+      "creator": {
+          "_id": "2",
+          "fullname": "Jane Smith"
+      }
   }
 ]

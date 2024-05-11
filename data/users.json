@@ -1,0 +1,68 @@
+[
+    {
+        "_id": "1",
+        "fullname": "John Doe",
+        "username": "john_doe",
+        "isAdmin": false
+    },
+    {
+        "_id": "2",
+        "fullname": "Jane Smith",
+        "username": "jane_smith",
+        "isAdmin": false
+    },
+    {
+        "_id": "3",
+        "fullname": "Michael Johnson",
+        "username": "michael_j",
+        "isAdmin": false
+    },
+    {
+        "_id": "4",
+        "fullname": "Emily Brown",
+        "username": "emily_brown",
+        "isAdmin": false
+    },
+    {
+        "_id": "5",
+        "fullname": "David Lee",
+        "username": "david_lee",
+        "isAdmin": false
+    },
+    {
+        "_id": "6",
+        "fullname": "Sarah Wilson",
+        "username": "sarah_wilson",
+        "isAdmin": false
+    },
+    {
+        "_id": "7",
+        "fullname": "James Taylor",
+        "username": "james_taylor",
+        "isAdmin": false
+    },
+    {
+        "_id": "8",
+        "fullname": "Olivia Martinez",
+        "username": "olivia_m",
+        "isAdmin": false
+    },
+    {
+        "_id": "9",
+        "fullname": "Daniel Anderson",
+        "username": "daniel_a",
+        "isAdmin": false
+    },
+    {
+        "_id": "10",
+        "fullname": "Admin",
+        "username": "Admin",
+        "isAdmin": true
+    },
+    {
+        "username": "test_123",
+        "password": "$2b$10$6aLZqgNlmGny3hNdYfuHze.Q.hCyy99wnfdVOx.rqzN832r0jcqtW",
+        "fullname": "Test 123",
+        "_id": "xBObzf"
+    }
+]
